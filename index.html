@@ -5,79 +5,42 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Image Gallery</title>
+    <title>Music Player</title>
 
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <h1>Image Gallery</h1>
+    <div class="player">
+      <h1>🎵 Music Player</h1>
 
-    <!-- Filter Buttons -->
+      <img id="cover" />
 
-    <div class="buttons">
-      <button class="active" onclick="filterImages('all')">All</button>
+      <h2 id="title"></h2>
 
-      <button onclick="filterImages('nature')">Nature</button>
+      <p id="artist"></p>
 
-      <button onclick="filterImages('city')">City</button>
+      <audio id="audio"></audio>
 
-      <button onclick="filterImages('animals')">Animals</button>
-    </div>
+      <div class="buttons">
+        <button id="prev">⏮</button>
 
-    <!-- Image Gallery -->
+        <button id="play">▶</button>
 
-    <div class="gallery">
-      <div class="image nature">
-        <img src="image.jpg" onclick="openLightbox(1)" />
-      </div>
-      <div class="image nature">
-        <img src="img 3.jpg" onclick="openLightbox(2)" />
-      </div>
-      <div class="image nature">
-        <img src="nature.jpg" onclick="openLightbox(3)" />
-      </div>
-      <div class="image nature">
-        <img src="nature 2.webp" onclick="openLightbox(4)" />
-      </div>
-      <div class="image nature">
-        <img src="nature 3.webp" onclick="openLightbox(5)" />
-      </div>
-      <div class="image nature">
-        <img src="nature 4.jpg" onclick="openLightbox(6)" />
+        <button id="next">⏭</button>
       </div>
 
-      <div class="image city">
-        <img src="city 1.jpg" onclick="openLightbox(7)" />
-      </div>
-      <div class="image city">
-        <img src="city 2.jpg" onclick="openLightbox(8)" />
-      </div>
-      <div class="image city">
-        <img src="city 3.jpg" onclick="openLightbox(9)" />
-      </div>
+      <input type="range" id="progress" value="0" />
 
-      <div class="image animals">
-        <img src="animal 3.jpg" onclick="openLightbox(10)" />
-      </div>
-      <div class="image animals">
-        <img src="animal 4.jpg" onclick="openLightbox(11)" />
-      </div>
-      <div class="image animals">
-        <img src="animal.jpg" onclick="openLightbox(12)" />
-      </div>
-    </div>
+      <p id="time">0:00 / 0:00</p>
 
-    <!-- Lightbox -->
+      <label>Volume</label>
 
-    <div id="lightbox">
-      <span class="close" onclick="closeLightbox()">&times;</span>
+      <input type="range" id="volume" min="0" max="1" step="0.1" value="1" />
 
-      <button class="prev" onclick="changeImage(-1)">❮</button>
+      <h3>Playlist</h3>
 
-      <img id="lightbox-image" />
-
-      <button class="next" onclick="changeImage(1)">❯</button>
+      <ul id="playlist"></ul>
     </div>
 
     <script src="script.js"></script>
