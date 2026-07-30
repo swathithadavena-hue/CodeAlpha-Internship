@@ -54,7 +54,7 @@ Image-Gallery/
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/Image-Gallery.git
+   git clone https://github.com/swathithadavena-hue/Image-Gallery.git
    ```
 
 2. Open the project folder.
